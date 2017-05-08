@@ -1,0 +1,34 @@
+﻿html, body, #app {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+
+.anticon-file-excel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.panel-title {
+    font-size: 16px;
+}
+
+.datagrid-footer {
+    font-weight: 700;
+}
+
+.datagrid-toolbar .l-btn {
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+    .datagrid-toolbar .l-btn:hover {
+        background-color: #3e8fff;
+        border-color: #3e8fff;
+        color: white !important;
+    }

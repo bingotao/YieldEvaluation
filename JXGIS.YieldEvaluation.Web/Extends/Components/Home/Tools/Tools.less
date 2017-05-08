@@ -1,0 +1,94 @@
+﻿@import '~/Extends/default.less';
+
+.tools {
+    @bd-color: @border-color-base;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: 1px solid @bd-color;
+    border-radius: 3px;
+    z-index: 9;
+
+    > ul {
+        display: flex;
+        background-color: white;
+        box-shadow: 2px 2px 2px 0 @bd-color;
+        border-radius: 3px;
+
+        > li {
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 5px 10px;
+            border-right: 1px solid @bd-color;
+            cursor: pointer;
+            /*transition: 0.2s;*/
+
+            &:first-child {
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+            > span {
+                i {
+                    margin-right: 8px;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 12px 0 @bd-color inset;
+
+                span {
+                    color: @primary-color;
+                }
+            }
+
+            &:last-child {
+                border: 0;
+            }
+
+            &:hover {
+                > ul {
+                    display: block;
+                }
+            }
+
+            > ul {
+                position: absolute;
+                width: calc(~'100% + 2px');
+                left: -1px;
+                top: 100%;
+                display: none;
+                border: 1px solid @bd-color;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                background-color: white;
+
+                > li {
+                    padding: 3px;
+                    text-align: center;
+                    /*transition: 0.2s;*/
+
+                    &:hover {
+                        box-shadow: 0 0 12px 0 @bd-color inset;
+                        color: @primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .split {
+        padding: 0;
+        margin: 3px 10px;
+        border-bottom: 1px solid @bd-color;
+    }
+}

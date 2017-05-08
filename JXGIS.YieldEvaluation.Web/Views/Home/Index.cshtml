@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterBlank.cshtml";
+    Bundles.Reference("Extends/Components/Home", "page");
+}
+
+<div id="app"></div>
+@Bundles.RenderStylesheets("page")
+@Bundles.RenderScripts("page")

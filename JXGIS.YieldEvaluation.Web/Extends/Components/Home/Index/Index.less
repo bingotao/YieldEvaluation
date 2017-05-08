@@ -1,0 +1,65 @@
+﻿@import '~/Extends/default.less';
+
+* {
+    z-index: 1;
+}
+
+html, body, #app, .home-index {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-index {
+    @header-height: 60px;
+
+    .home-index-header {
+        position: relative;
+        z-index: 9;
+        height: @header-height;
+        border-bottom: 1px solid @border-color-split;
+        box-shadow: 0 1px 2px 0 @border-color-split;
+        background-image: url(~'@{_bl_}/Reference/images/home-header.jpg');
+    }
+
+    .home-index-body {
+        position: relative;
+        height: calc(~'100% - @{header-height}');
+    }
+
+    .sort-result {
+        display: none;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+
+        &.active {
+            display: block;
+        }
+
+        #sortFrame {
+            height: 100%;
+            width: 100%;
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                color: @primary-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+﻿@import '~/Extends/default.less';
+
+.enterprise-sort {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -350px;
+    margin-top: -200px;
+    display: flex;
+    height: 400px;
+    width: 700px;
+    border: 1px solid @border-color-base;
+    background-color: white;
+    box-shadow: 1px 1px 2px 0 @border-color-base;
+    border-radius: 3px;
+    z-index: 9;
+
+    &-left, &-right {
+        margin-top: 35px;
+        width: 50%;
+        padding: 5px;
+    }
+
+    &-right {
+        > table {
+            margin-top: 10px;
+            border-collapse: collapse;
+            height: 280px;
+            width: calc(~'100% - 30px');
+
+            th, td {
+                font-size: 14px;
+                font-weight: normal;
+            }
+        }
+
+        > div {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    #enterprise_sort_title {
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        padding-left: 20px;
+        /*background-color: #eee;*/
+        border-bottom: 1px solid @primary-color;
+        color: @primary-color;
+        font-size: 18px;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        font-size: 24px;
+        color: #808080;
+        cursor: pointer;
+        transition: 0.3s;
+        z-index: 2;
+
+        &:hover {
+            color: @primary-color;
+        }
+    }
+}
+
+.ct-option {
+    display: flex;
+    justify-content: center;
+}
+
+.ant-select-selection__rendered {
+    display: flex;
+    justify-content: center;
+}

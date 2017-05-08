@@ -1,0 +1,124 @@
+﻿@import '~/Extends/default.less';
+
+.singlecognizance {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -260px;
+    width: 800px;
+    height: 520px;
+    border: 1px solid @border-color-base;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 0 @border-color-base;
+    overflow: hidden;
+    background-color: white;
+    z-index: 9;
+
+    .btn-close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        font-size: 24px;
+        color: #808080;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            color: @primary-color;
+        }
+    }
+
+    #singlecognizance_header {
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        padding-left: 20px;
+        /*background-color: #eee;*/
+        border-bottom: 1px solid @primary-color;
+        color: @primary-color;
+        font-size: 18px;
+    }
+
+    .singlecognizance-conditions {
+        height: 160px;
+        padding: 10px;
+
+        > table {
+            height: 100%;
+            width: 100%;
+
+            th, td {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+
+            th {
+                width: 17%;
+                text-align: right;
+            }
+
+            td {
+                width: 33%;
+                text-align: left;
+            }
+        }
+    }
+
+    .singlecognizance-results {
+        height: calc(~'100% - 200px');
+
+        > table {
+            height: 100%;
+        }
+    }
+
+    .singlecognizance-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+
+        > div {
+            height: 50px;
+            line-height: 50px;
+            color: @primary-color;
+            font-size: 16px;
+            border-bottom: 1px solid @border-color-split;
+            padding-left: 50px;
+        }
+
+        > table {
+            width: 100%;
+            height: calc(~'100% - 90px');
+            font-size: 14px;
+            margin: 20px auto;
+
+            th {
+                width: 40%;
+                text-align: right;
+            }
+
+            td {
+                padding-left: 20px;
+                width: 60%;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.datagrid-toolbar {
+    .l-btn {
+        background-color: #eee;
+        border-radius: 2px;
+
+        &:hover {
+            background-color: @primary-color;
+            border-color: @primary-color;
+            color: white;
+        }
+    }
+}

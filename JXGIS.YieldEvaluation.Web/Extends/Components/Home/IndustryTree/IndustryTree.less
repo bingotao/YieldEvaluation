@@ -1,0 +1,40 @@
+﻿@import '~/Extends/default.less';
+
+.industry-tree {
+    height: 350px;
+    overflow: hidden;
+
+
+    .industry-tree-header, .industry-tree-selectall {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .industry-tree-selectall {
+        border: 1px solid @border-color-split;
+    }
+
+    .industry-tree-body {
+        height: calc(~'100% - 30px');
+        border: 1px solid @border-color-split;
+        overflow: auto;
+        border-radius: 3px;
+        
+    }
+
+    .ant-tree {
+        > li {
+            margin-left: 10px;
+
+            > .ant-tree-switcher {
+                display: none;
+            }
+
+            > ul {
+                padding-left: 0;
+            }
+        }
+    }
+}
